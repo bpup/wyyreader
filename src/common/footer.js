@@ -7,7 +7,7 @@ class TabBarCommon extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'redTab',
+      selectedTab: 'blueTab',
       hidden: false,
     };
   }
@@ -40,7 +40,7 @@ class TabBarCommon extends React.Component {
           selectedIcon={<div style={{
             width: '0.44rem',
             height: '0.44rem',
-            background: 'urlhttp://ovj4n4xu6.bkt.clouddn.com/%E4%B9%A6.svg) center center /  0.42rem 0.42rem no-repeat' }}
+            background: 'url(http://ovj4n4xu6.bkt.clouddn.com/%E4%B9%A6.svg) center center /  0.42rem 0.42rem no-repeat' }}
           />
           }
           selected={this.state.selectedTab === 'blueTab'}
@@ -57,13 +57,13 @@ class TabBarCommon extends React.Component {
 		icon={<div style={{
             width: '0.44rem',
             height: '0.44rem',
-            background: 'url(http://ovj4n4xu6.bkt.clouddn.com/%E4%B9%A62.svg) center center /  0.42rem 0.42rem no-repeat' }}
+            background: 'url(http://ovj4n4xu6.bkt.clouddn.com/telephone.svg) center center /  0.42rem 0.42rem no-repeat' }}
           />
           }
           selectedIcon={<div style={{
             width: '0.44rem',
             height: '0.44rem',
-            background: 'url(http://ovj4n4xu6.bkt.clouddn.com/%E4%B9%A62.svg) center center /  0.42rem 0.42rem no-repeat' }}
+            background: 'url(http://ovj4n4xu6.bkt.clouddn.com/telephone.svg) center center /  0.42rem 0.42rem no-repeat' }}
           />
           }
           title="书架"
