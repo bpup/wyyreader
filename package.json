@@ -2,7 +2,7 @@
   "name": "wyyreader",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://spar.coding.me/wyyreader/build",  
+  "homepage": "http://Spar.coding.me/wyyreader/build",  
   "dependencies": {
     "antd-mobile": "^1.6.5",
     "react": "^15.6.1",
