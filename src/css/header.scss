@@ -65,11 +65,34 @@
 	width: 100%;
 	height: 100%;
 	display: flex;
-	background: #00B2FF
+	*{
+		width: 100%;
+	}
+	.am-tabs-tab-active{
+		background: #fff !important;
+		color: #ed6460 !important;
+	}
+	.am-tabs-ink-bar-animated{
+		background: #ed6460 !important;
+	}
 }
 .publish{
 	width: 100%;
 	height: 100%;
 	display: flex;
-	background: #05F44F
+	*{
+		width: 100%;
+	}
+	.am-tabs-tab-active{
+		background: #fff !important;
+		color: #ed6460 !important;
+	}
+	.am-tabs-ink-bar-animated{
+		background: #ed6460 !important;
+	}
+}
+.am-tab-bar-tab{
+	height: .9rem;
+	justify-content: space-around;
+	align-items: center;
 }

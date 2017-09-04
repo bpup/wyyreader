@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NavBar from 'antd-mobile/lib/nav-bar'
 import Tabs from 'antd-mobile/lib/tabs'
 import ListView from 'antd-mobile/lib/list-view'
-import TabExample from '../component/male.js'
+import TabExample from '../component/listtab.js'
 import '../css/header.css'
 
 const TabPane = Tabs.TabPane;
@@ -27,14 +27,14 @@ const TabIndex = () => (
     <Tabs swipeable='false' className='tabs' defaultActiveKey="2" onChange={callback} onTabClick={handleTabClick}>
       <TabPane className='totaltab' tab='男生' key="1">
         <div className="male">
-        <TabExample/>
+        <TabExample sort='male'/>
         </div>
       </TabPane>
       <TabPane className='totaltab' tab='女生' key="2">
-      <div className="female">女生</div>        
+      <div className="female"><TabExample/></div>        
       </TabPane>
       <TabPane className='totaltab' tab='出版' key="3">
-      <div className="publish">出版</div>        
+      <div className="publish"> <TabExample/></div>        
       </TabPane>
     </Tabs>
   </div>

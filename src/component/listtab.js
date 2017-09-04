@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Tabs from 'antd-mobile/lib/tabs'
+import Carouselmale from './recommend/recommendmale.js'
 const TabPane = Tabs.TabPane;
 
 function callback(key) {
@@ -13,7 +14,7 @@ const TabExample = () => (
     <Tabs swipeable className='manyTabs' defaultActiveKey="1" onChange={callback} onTabClick={handleTabClick}>
       <TabPane tab='推荐' key="1" style={{flexGrow:1}}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '5rem', backgroundColor: '#fff' }}>
-          Content of First Tab
+          <Carouselmale/>
         </div>
       </TabPane>
       <TabPane tab='口味' key="2" style={{flexGrow:1}}>

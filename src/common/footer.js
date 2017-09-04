@@ -24,7 +24,7 @@ class TabBarCommon extends React.Component {
     return (
       <TabBar
         unselectedTintColor="#949494"
-        tintColor="#33A3F4"
+        tintColor="#ed6460"
         barTintColor="white"
         hidden={this.state.hidden}
       >
@@ -34,13 +34,13 @@ class TabBarCommon extends React.Component {
           icon={<div style={{
             width: '0.44rem',
             height: '0.44rem',
-            background: 'url(http://ovj4n4xu6.bkt.clouddn.com/%E4%B9%A6.svg) center center /  0.42rem 0.42rem no-repeat' }}
+            background: 'url(http://ovj4n4xu6.bkt.clouddn.com/notebook.svg) center center /  0.42rem 0.42rem no-repeat' }}
           />
           }
           selectedIcon={<div style={{
             width: '0.44rem',
             height: '0.44rem',
-            background: 'url(http://ovj4n4xu6.bkt.clouddn.com/%E4%B9%A6.svg) center center /  0.42rem 0.42rem no-repeat' }}
+            background: 'url(http://ovj4n4xu6.bkt.clouddn.com/notebook.svg) center center /  0.42rem 0.42rem no-repeat' }}
           />
           }
           selected={this.state.selectedTab === 'blueTab'}
@@ -83,14 +83,14 @@ class TabBarCommon extends React.Component {
             <div style={{
               width: '0.44rem',
               height: '0.44rem',
-              background: 'url(http://ovj4n4xu6.bkt.clouddn.com/%E8%AE%A2%E9%98%85.svg) center center /  0.42rem 0.42rem no-repeat' }}
+              background: 'url(http://ovj4n4xu6.bkt.clouddn.com/cup%20%281%29.svg) center center /  0.42rem 0.42rem no-repeat' }}
             />
           }
           selectedIcon={
             <div style={{
               width: '0.44rem',
               height: '0.44rem',
-              background: 'url(http://ovj4n4xu6.bkt.clouddn.com/%E8%AE%A2%E9%98%85.svg) center center /  0.42rem 0.42rem no-repeat' }}
+              background: 'url(http://ovj4n4xu6.bkt.clouddn.com/cup%20%281%29.svg) center center /  0.42rem 0.42rem no-repeat' }}
             />
           }
           title="订阅"
