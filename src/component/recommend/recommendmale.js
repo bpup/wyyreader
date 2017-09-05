@@ -100,10 +100,12 @@ class GridExample extends React.Component{
 
 
 	componentDidMount = () => {
-		var _this=this		
+		var _this=this	
+
+ 	
 		axios.request(
 			{	
-					url: 'https://api.douban.com/v2/book/search',
+					url: 'https://bird.ioliu.cn/v1/?url=https://api.douban.com/v2/book/search',
 					method: 'get', 
 				// 	headers: {
 				// 		'contentType':'application/json',
@@ -118,7 +120,6 @@ class GridExample extends React.Component{
 				}
 			
 		).then(function (response) {
-			 alert(response)
 				_this.setState({
 				bookdata:response.data.books})
 			}).catch(function (error) {
