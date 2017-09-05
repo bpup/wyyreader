@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Tabs from 'antd-mobile/lib/tabs'
-import Carouselmale from './recommend/recommendmale.js'
+import Recommend from './recommend/recommendmale.js'
 const TabPane = Tabs.TabPane;
 
 function callback(key) {
@@ -9,12 +9,16 @@ function callback(key) {
 function handleTabClick(key) {
   console.log('onTabClick', key);
 }
-const TabExample = () => (
-  <div>
-    <Tabs swipeable className='manyTabs' defaultActiveKey="1" onChange={callback} onTabClick={handleTabClick}>
+class Tabsecond extends React.Component {
+  constructor(props) {
+   super(props)
+  }
+  render(){
+    return   <div>
+    <Tabs swipeable={false} className='manyTabs' defaultActiveKey="1" onChange={callback} onTabClick={handleTabClick}>
       <TabPane tab='推荐' key="1" style={{flexGrow:1}}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '5rem', backgroundColor: '#fff' }}>
-          <Carouselmale/>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff' }}>
+          <Recommend/>
         </div>
       </TabPane>
       <TabPane tab='口味' key="2" style={{flexGrow:1}}>
@@ -39,6 +43,8 @@ const TabExample = () => (
       </TabPane>
     </Tabs>
   </div>
-);
 
-export default TabExample
+  }
+
+}
+export default Tabsecond
