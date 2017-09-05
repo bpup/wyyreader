@@ -93,36 +93,48 @@ class Taghot extends React.Component{
 class GridExample extends React.Component{
 	constructor (props) {
 		super(props)
-		this.GetBooklist=this.GetBooklist.bind(this)
 		this.state={
 			bookdata:[]
 		}
 	}
-	GetBooklist=(tag)=>{
-		var _this=this
-		axios.get('https://api.douban.com/v2/book/search?'+tag)
-		.then(function (response) {
-			_this.setState({
-			bookdata:response.data.books})
- 
-		}).catch(function (error) {
-		console.log(error);
-		})
-	}
+
 
 	componentDidMount = () => {
-		this.GetBooklist('tag=经典&count=30')
+		var _this=this		
+		axios.request(
+			{	
+					url: 'https://api.douban.com/v2/book/search',
+					method: 'get', 
+				// 	headers: {
+				// 		'contentType':'application/json',
+				
+				// },
+					params: {
+						q: '经典',
+						count:30
+					}
+				
+				
+				}
+			
+		).then(function (response) {
+			 alert(response)
+				_this.setState({
+				bookdata:response.data.books})
+			}).catch(function (error) {
+					console.dir(error)
+			})
+		}
 	
-	}
+	
 	
 
 	
 	
 	render(){
-			let bookdata=this.state.bookdata
-			alert(bookdata.length)
+		
+			let bookdata=this.state.bookdata||[]
 			let datasix=bookdata.slice(0,6)
-			
 				return <div>
 				<div className="sub-title">经典必读</div>
 				<Grid data={datasix}
@@ -178,3 +190,5 @@ class Recommend extends React.Component{
 	
 	}
 export default Recommend
+
+
