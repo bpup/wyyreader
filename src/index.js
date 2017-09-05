@@ -4,6 +4,5 @@ import './css/reset.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import 'antd-mobile/dist/antd-mobile.min.css'
-import  axios from 'axios'
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

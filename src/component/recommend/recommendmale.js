@@ -87,95 +87,94 @@ class Taghot extends React.Component{
 	}
 }
 
-// class ListBook extends React.Component{
-// 	constructor(props) {
-// 		super(props)
-		
-// 	}
-// 	render(){
-// 		return 
-// 	}
-	
-// }
-
-
-
 
 
 
 class GridExample extends React.Component{
 	constructor (props) {
 		super(props)
+		this.GetBooklist=this.GetBooklist.bind(this)
 		this.state={
-			data:null
+			bookdata:[]
 		}
 	}
-
-	
-	render(){
-		console.log(this.props.bookdata,'dsdsds')
-		let datasix=this.props.bookdata.slice(0,6)
-		console.log(datasix)
-		return <div>
-		<div className="sub-title">经典必读</div>
-		<Grid data={datasix}
-		  hasLine={false}
-		  columnNum={3}
-		  renderItem={dataItem => (
-			<div className='singlewarp'>
-			  <img src={dataItem.images.large} style={{ width: '2.15rem',height:'3.2rem'}}/>
-			  <div className='booktitle' style={{ color: '#24221f',textAlign:'left'}}>
-				<p style={{fontSize:'0.36rem',marginLeft:'0.2rem',textAlign:'left',marginTop:'0.2rem',marginBottom:'0'}}>{dataItem.title}</p>
-				<span style={{
-
-											fontSize:'0.24rem',
-											color:'#d4d3dd',
-											marginLeft:'0.2rem',
-											overflow:'hidden',
-											textEmphasis:'elas',
-											marginTop:'0.1rem',
-											maxWidth:'1.6rem',
-											textOverflow:'ellipsis'
-											}}>{dataItem.author}</span>
-			  </div>
-			</div>
-		  )}
-		/>
-	  </div>
+	GetBooklist=(tag)=>{
+		var _this=this
+		axios.get('https://api.douban.com/v2/book/search?'+tag)
+		.then(function (response) {
+			_this.setState({
+			bookdata:response.data.books})
+ 
+		}).catch(function (error) {
+		console.log(error);
+		})
 	}
 
-}
+	componentDidMount = () => {
+		this.GetBooklist('tag=经典&count=30')
+	
+	}
+	
+
+	
+	
+	render(){
+			let bookdata=this.state.bookdata
+			alert(bookdata.length)
+			let datasix=bookdata.slice(0,6)
+			
+				return <div>
+				<div className="sub-title">经典必读</div>
+				<Grid data={datasix}
+					hasLine={false}
+					columnNum={3}
+					renderItem={dataItem => (
+					<div className='singlewarp'>
+						<img src={dataItem.images.large} style={{ width: '2.15rem',height:'3.2rem'}}/>
+						<div className='booktitle' style={{ color: '#24221f',textAlign:'left'}}>
+						<p style={{fontSize:'0.36rem',marginLeft:'0.2rem',textAlign:'left',marginTop:'0.2rem',marginBottom:'0'}}>{dataItem.title}</p>
+						<span style={{
+		
+													fontSize:'0.24rem',
+													color:'#d4d3dd',
+													marginLeft:'0.2rem',
+													overflow:'hidden',
+													textEmphasis:'elas',
+													marginTop:'0.1rem',
+													maxWidth:'1.6rem',
+													textOverflow:'ellipsis'
+													}}>{dataItem.author}</span>
+						</div>
+					</div>
+					)}
+				/>
+				</div>
+
+
+		}
+
+		
+	
+	}
+
+
 
 class Recommend extends React.Component{
 	constructor(props) {
 		super(props)
-		this.state={
-			bookdata:null
-		}
+
 	}
-	componentDidMount = () => {
-		var _this=this
-		const GetBooklist=(tag)=>{
-			axios.get('https://api.douban.com/v2/book/search?'+tag)
-			.then(function (response) {
-				_this.setState({
-				bookdata:response.data.books
-				})   
-			})
-			.catch(function (error) {
-			console.log(error);
-			});
-		}
-		GetBooklist('tag=经典&count=30')
-	}
+
+
 	
 	render(){
-		let bookdata=this.state.bookdata?this.state.bookdata:[]
-		return <div>
+	
+			return <div>
 			<Carouselmale/>
 			<Taghot/>
-			<GridExample bookdata={bookdata}/>
+			<GridExample />
 		</div>
+		}
+	
 	}
-}
 export default Recommend
