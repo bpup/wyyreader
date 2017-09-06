@@ -5,6 +5,9 @@ import WhiteSpace from 'antd-mobile/lib/white-space'
 import Grid from 'antd-mobile/lib/grid'
 import axios from 'axios'
 
+import {
+	NavLink,
+} from 'react-router-dom'
 const tagcontent=[
 	'骁骑校最新都市悬疑力作《罪恶调查局》',
 	'我才不会被女孩子欺负呢!',
@@ -44,8 +47,8 @@ constructor(props) {
           infinite
           selectedIndex={1}
           swipeSpeed={35}
-          beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
-          afterChange={index => console.log('slide to', index)}
+          /* beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
+          afterChange={index => console.log('slide to', index)} */
 		  dots={true}
         >
 
@@ -137,9 +140,15 @@ class GridExample extends React.Component{
 	render(){
 		
 			let bookdata=this.state.bookdata||[]
+			var localtion={
+				pathname: '/more',
+				state: { 
+					bookdata: bookdata,
+					title:this.props.title
+				}}
 			let datasix=bookdata.slice(0,6)
 				return <div>
-				<div className="sub-title">{this.props.title}</div>
+				<div className="sub-title">{this.props.title} <NavLink  className='more' to={localtion}><span>更多...</span></NavLink></div>
 				<Grid data={datasix}
 					hasLine={false}
 					columnNum={3}
@@ -194,9 +203,10 @@ class Recommend extends React.Component{
 			<Carouselmale/>
 			<Taghot/>
 			<GridExample tag="修真" title='每日精选' count={100}/>
-			<GridExample tag="武侠修真" title='经典完本' count={100}/>
+			<GridExample tag="武侠" title='经典完本' count={100}/>
+			<GridExample tag="仙侠" title='经典完本' count={100}/>
 			<GridExample tag="世界名著" title='限时免费' count={100}/>
-			<GridExample tag="官场风云" title='官场风云' count={100}/>
+			<GridExample tag="官场" title='官场风云' count={100}/>
 		</div>
 		}
 	

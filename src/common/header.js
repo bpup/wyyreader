@@ -24,7 +24,7 @@ function handleTabClick(key) {
 }
 const TabIndex = () => (
   <div>
-    <Tabs swipeable={false} className='tabs' defaultActiveKey="2" onChange={callback} onTabClick={handleTabClick}>
+    <Tabs swipeable={false} className='tabs' defaultActiveKey="1" onChange={callback} onTabClick={handleTabClick}>
       <TabPane className='totaltab' tab='男生' key="1">
         <div className="male">
         <TabExample sort='male'/>

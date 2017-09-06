@@ -101,7 +101,7 @@
 	align-items: center;
 	margin: .08rem 0;
 	padding-bottom: .1rem;
-	border-bottom: 1px solid #ededed;
+	border-bottom: .01rem solid #ededed;
 	margin-bottom: .2rem;
 }
 .tag{
@@ -127,7 +127,15 @@
 	background-image: linear-gradient(to right,  #ff8560,#f8b244);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	.more{
+		font-size: .26rem;
+		margin-right: 1rem;
+		color: #8a8886 !important;
+		text-align: right;
+	}
 	
 		
 	&::after{
@@ -158,3 +166,46 @@
 	height: 3.2rem;
 	margin:.24rem 0 1.2rem 0;
 }
+.iconhuitui{
+	font-size: 0.6rem !important;
+	color: #333;
+	position: relative;
+	right: 100%;
+}
+
+.cardbody{
+	display: flex;
+	img{
+		width: 2.05rem;
+		height: 3.2rem;
+		margin-right:.66rem; 
+	}
+	.sidebox{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	div{
+
+		height: 0.5rem;
+		color: #252320;
+		font-size: 0.42rem;
+		font-weight: normal !important;
+	}
+	span{
+		color:#aaaaaa;
+		font-size: 0.26rem;
+		margin-top: -.6rem;
+	}
+	p{
+		max-height: 1rem;
+		max-width: 4rem;
+		color:#999999;
+		font-size: 0.3rem;
+		margin: 0;
+		line-height: 1.5;
+		margin-bottom: 0.2rem;
+		overflow : hidden;
+		text-overflow: ellipsis;
+		-webkit-line-clamp: 2;
+	}
+}}
