@@ -190,6 +190,9 @@
 		color: #252320;
 		font-size: 0.42rem;
 		font-weight: normal !important;
+		overflow : hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	span{
 		color:#aaaaaa;
@@ -209,3 +212,6 @@
 		-webkit-line-clamp: 2;
 	}
 }}
+.listcontent{
+	margin-top: .8rem;
+}

@@ -108,7 +108,7 @@ class GridExample extends React.Component{
  	
 		axios.request(
 			{	
-					url: 'https://bird.ioliu.cn/v2/?url=https://api.douban.com/v2/book/search',
+					url: 'https://api.douban.com/v2/book/search',
 					method: 'get', 
 				// 	headers: {
 				// 		'contentType':'application/json',
