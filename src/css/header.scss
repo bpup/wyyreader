@@ -215,3 +215,54 @@
 .listcontent{
 	margin-top: .8rem;
 }
+.am-navbar-left{
+	position: relative;
+	z-index: 100;
+}
+.am-drawer-sidebar{
+	position: relative;
+	z-index: 200 !important;
+	overflow: hidden;
+	
+}
+
+.sidber-avatar{
+	.am-card-header-content{
+		margin-top: 0.3rem;
+		margin-left: 0.25rem;
+	}
+	.am-list-item-active{
+		background: none !important;
+	}
+	.am-list-line::after{
+		display: none !important;
+	}
+	.greyer{
+		color: #676562;
+		margin-right: .2rem;
+	}
+	.siber-footer{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		position: fixed;
+		bottom: -0.1rem;
+		left:0;
+		width: 100%;
+		background: #f5f5f5;
+		min-height: 1.5rem;
+
+	}
+	section{
+		font-size: .4rem;
+		text-align: center;
+		svg{
+			position: relative;
+			left: 0.02rem;
+		}
+		.icon-yejian{
+			color:#333 !important;
+			
+		}
+	}
+}
