@@ -105,15 +105,17 @@ class GridExample extends React.Component{
  	
 		axios.request(
 			{	
-					url: 'https://bird.ioliu.cn/v1/?url=https://api.douban.com/v2/book/search',
+					url: 'https://bird.ioliu.cn/v2/?url=https://api.douban.com/v2/book/search',
 					method: 'get', 
 				// 	headers: {
 				// 		'contentType':'application/json',
 				
 				// },
 					params: {
-						q: '经典',
-						count:30
+						tag: this.props.tag,
+						count:parseInt(this.props.count),
+						start:60
+
 					}
 				
 				
@@ -137,7 +139,7 @@ class GridExample extends React.Component{
 			let bookdata=this.state.bookdata||[]
 			let datasix=bookdata.slice(0,6)
 				return <div>
-				<div className="sub-title">经典必读</div>
+				<div className="sub-title">{this.props.title}</div>
 				<Grid data={datasix}
 					hasLine={false}
 					columnNum={3}
@@ -145,7 +147,13 @@ class GridExample extends React.Component{
 					<div className='singlewarp'>
 						<img src={dataItem.images.large} style={{ width: '2.15rem',height:'3.2rem'}}/>
 						<div className='booktitle' style={{ color: '#24221f',textAlign:'left'}}>
-						<p style={{fontSize:'0.36rem',marginLeft:'0.2rem',textAlign:'left',marginTop:'0.2rem',marginBottom:'0'}}>{dataItem.title}</p>
+						<p style={{
+							fontSize:'0.32rem',
+							marginLeft:'0.2rem',
+							textAlign:'left',
+							marginTop:'0.2rem',
+							width:'2rem'				
+							}}>{dataItem.title}</p>
 						<span style={{
 		
 													fontSize:'0.24rem',
@@ -185,7 +193,10 @@ class Recommend extends React.Component{
 			return <div>
 			<Carouselmale/>
 			<Taghot/>
-			<GridExample />
+			<GridExample tag="修真" title='每日精选' count={100}/>
+			<GridExample tag="武侠修真" title='经典完本' count={100}/>
+			<GridExample tag="世界名著" title='限时免费' count={100}/>
+			<GridExample tag="官场风云" title='官场风云' count={100}/>
 		</div>
 		}
 	
