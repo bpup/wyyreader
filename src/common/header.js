@@ -8,7 +8,6 @@ import List from 'antd-mobile/lib/list'
 import Button from 'antd-mobile/lib/button'
 import TabExample from '../component/listtab.js'
 import '../css/header.css'
-
 const Item = List.Item;
 const Brief = Item.Brief;
 const TabPane = Tabs.TabPane;
@@ -143,7 +142,7 @@ const TabIndex = () => (
                  position:'relative',
                  top:'-0.08rem'
                  }}
-         >充值</Button>
+         >兑换</Button>
       
       </Item>
    

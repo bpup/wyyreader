@@ -198,24 +198,28 @@
 
 .cardbody {
   display: flex;
+  position: relative;
 }
 
 .cardbody img {
   width: 2.05rem;
-  height: 3.2rem;
+  height: 2.8rem;
   margin-right: .66rem;
 }
 
 .cardbody .sidebox {
   display: flex;
+  position: absolute;
   flex-direction: column;
   justify-content: space-between;
+  text-align: left;
+  left: 2.8rem;
 }
 
 .cardbody .sidebox div {
   height: 0.5rem;
   color: #252320;
-  font-size: 0.42rem;
+  font-size: 0.36rem;
   font-weight: normal !important;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -226,19 +230,24 @@
   color: #aaaaaa;
   font-size: 0.26rem;
   margin-top: -.6rem;
+  max-width: 4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: absolute;
+  top: 1.3rem;
 }
 
 .cardbody .sidebox p {
-  max-height: 1rem;
-  max-width: 4rem;
-  color: #999999;
-  font-size: 0.3rem;
-  margin: 0;
-  line-height: 1.5;
-  margin-bottom: 0.2rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
+  max-width: 4rem !important;
+  max-height: 1.0rem;
+  margin-top: 1rem;
+  white-space: normal;
+  line-height: 1.6;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  text-overflow: ellipsis !important;
 }
 
 .listcontent {
@@ -247,7 +256,7 @@
 
 .am-navbar-left {
   position: relative;
-  z-index: 100;
+  z-index: 100 !important;
 }
 
 .am-drawer-sidebar {
@@ -298,4 +307,89 @@
 
 .sidber-avatar section .icon-yejian {
   color: #333 !important;
+}
+
+.addtoplist {
+  position: absolute;
+  top: -0.9rem;
+}
+
+.addtoplist .personalset {
+  color: #333;
+  width: 86%;
+  height: 1rem;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.3rem auto;
+  font-size: .32rem;
+}
+
+.addtoplist .personalset .icon-shu {
+  font-size: 0.7rem;
+  color: #333 !important;
+  width: 0.7rem;
+}
+
+.am-navbar-light {
+  z-index: 100;
+}
+
+.routetoinfo {
+  display: flex;
+  margin-top: .8rem;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+}
+
+.routetoinfo .icon-kafei {
+  font-size: .68rem;
+  position: relative;
+  left: 0.6rem;
+  color: #1b1818 !important;
+}
+
+.routetoinfo p {
+  width: 3.2rem;
+  line-height: 1.5;
+}
+
+.routetoinfo svg.icon-houtuir {
+  color: #737070 !important;
+  transform: rotate(180deg);
+  font-size: 0.58rem;
+}
+
+.classify {
+  text-align: center;
+  position: relative;
+  color: #aba59a;
+  font-size: 0.36rem;
+  padding: 0.08rem;
+}
+
+.classify::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 38%;
+  background: #dcdada;
+  left: 0;
+  top: 0.2rem;
+}
+
+.classify::before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 40%;
+  background: #dcdada;
+  left: 62%;
+  top: 0.2rem;
+}
+
+.am-flexbox-item {
+  flex: none !important;
 }

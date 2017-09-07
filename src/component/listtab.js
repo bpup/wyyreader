@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Tabs from 'antd-mobile/lib/tabs'
 import Recommend from './recommend/recommendmale.js'
+import Tast from './taste/tast.js'
+
 const TabPane = Tabs.TabPane;
 
 function callback(key) {
@@ -23,7 +25,7 @@ class Tabsecond extends React.Component {
       </TabPane>
       <TabPane tab='口味' key="2" style={{flexGrow:1}}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '5rem', backgroundColor: '#fff' }}>
-          Content of Second Tab
+          <Tast/>
         </div>
       </TabPane>
       <TabPane tab='免费' key="3"  style={{flexGrow:1}}>
