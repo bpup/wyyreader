@@ -11,18 +11,6 @@ import {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 const tagcontent=[
 	'骁骑校最新都市悬疑力作《罪恶调查局》',
 	'我才不会被女孩子欺负呢!',
@@ -111,47 +99,13 @@ class Taghot extends React.Component{
 class GridSix extends React.Component{
 	constructor (props) {
 		super(props)
-		this.state={
-			bookdata:[]
-		}
+	
+
 	}
-
-
-	componentDidMount = () => {
-		var _this=this	
-
- 	
-		axios.request(
-			{	
-					url: 'https://api.douban.com/v2/book/search',
-					method: 'get', 
-				// https://bird.ioliu.cn/v1/?url=
-					params: {
-						tag: this.props.tag,
-						count:parseInt(this.props.count),
-						start:parseInt(Math.random()*100)
-
-					}
-				
-				
-				}
-			
-		).then(function (response) {
-				_this.setState({
-				bookdata:response.data.books})
-			}).catch(function (error) {
-					console.dir(error)
-			})
-		}
-	
-	
-	
-
-	
-	
+		
 	render(){
 		
-			let bookdata=this.state.bookdata||[]
+			let bookdata=this.props.bookdata||[]
 			var localtion={
 				pathname: '/more',
 				state: { 
@@ -166,7 +120,7 @@ class GridSix extends React.Component{
 					columnNum={3}
 					renderItem={dataItem => (
 					<div className='singlewarp'>
-						<img src={dataItem.images.large} style={{ width: '2.15rem',height:'3.2rem'}}/>
+						<img src={dataItem?dataItem.images.large:'http://ovj4n4xu6.bkt.clouddn.com/Screenshot_2017-09-04-18-16-56-607_09.png'} style={{ width: '2.15rem',height:'3.2rem'}}/>
 						<div className='booktitle' style={{ color: '#24221f',textAlign:'left'}}>
 						<p style={{
 							fontSize:'0.32rem',
@@ -174,7 +128,7 @@ class GridSix extends React.Component{
 							textAlign:'left',
 							marginTop:'0.2rem',
 							width:'2rem'				
-							}}>{dataItem.title}</p>
+							}}>{dataItem?dataItem.title:'精品小说'}</p>
 						<span style={{
 		
 													fontSize:'0.24rem',
@@ -185,7 +139,7 @@ class GridSix extends React.Component{
 													marginTop:'0.1rem',
 													maxWidth:'1.6rem',
 													textOverflow:'ellipsis'
-													}}>{dataItem.author}</span>
+													}}>{dataItem?dataItem.author:null}</span>
 						</div>
 					</div>
 					)}
@@ -204,24 +158,37 @@ class GridSix extends React.Component{
 class Recommend extends React.Component{
 	constructor(props) {
 		super(props)
-
 	}
-
-
+	
+	shouldComponentUpdate(nextProps, nextState) {
+		if(Object.keys(nextProps.bookdata).length==8){
+			return true
+		}
+		return false
+	}
 	
 	render(){
-	
+		var bookdata=this.props.bookdata;
+		var keyarr=Object.keys(bookdata)
+		console.log(bookdata)
+		const tagarr={
+			 '0':'玄幻仙侠',
+			 "1":'悬疑冒险',
+			 "2":'编程语言',
+			 "3":'官场风云',
+			 "4":'历史传奇',
+			 "5":'短篇小说',
+			 "6":'诺贝尔系列',
+			 "7":'英文小说'}
 			return <div>
 			<Carouselmale/>
 			<Taghot/>
-			<GridSix tag="修真" title='每日精选' count={60}/>
-			<GridSix tag="武侠" title='经典完本' count={60}/>
-			<GridSix tag="仙侠" title='经典完本' count={60}/>
-			<GridSix tag="世界名著" title='限时免费' count={60}/>
-			<GridSix tag="官场" title='官场风云' count={60}/>
-			<GridSix tag="编程语言" title='编程语言' count={60}/>
-			<GridSix tag="英文阅读" title='外文阅读' count={60}/>
-			<GridSix tag="推理" title='烧脑系列' count={60}/>
+		  {	keyarr.map((i)=>{
+				console.log(i)
+		    	return <GridSix bookdata={bookdata[i]} key={i.toString()} title={tagarr[i]}/>
+				
+			})}
+		
 		</div>
 		}
 	

@@ -6,6 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import 'antd-mobile/dist/antd-mobile.min.css'
 import BookMoreList from './component/recommend/entry.js'
 import Personalset from './component/taste/personalset.js'
+import Infoinput from './component/taste/infoinput.js'
 import {
 	HashRouter,
 	Route,
@@ -38,7 +39,8 @@ class Entry extends React.Component {
 			<Switch>
 			  <Route exact path='/' component={App}/>
 			  <Route path='/more' component={BookMoreList}/>
-			  <Route path='/personset' component={Personalset}/>
+			  <Route exact path='/personset' component={Personalset}/>
+			  <Route path='/personset/infoinput' component={Infoinput}/>
 			</Switch>
 			</HashRouter>
 		)

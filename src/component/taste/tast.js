@@ -9,7 +9,7 @@ class Tast extends React.Component{
 		
 	}
 	render() {
-	  return <BookList/>
+	  return <BookList  bookdata={this.props.bookdata}/>
 		
 	}
 }

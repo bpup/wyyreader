@@ -190,7 +190,7 @@
 		text-align: left;
 		left:2.8rem;
 	div{
-
+        max-width: 4rem;
 		height: 0.5rem;
 		color: #252320;
 		font-size: 0.36rem;
@@ -328,9 +328,9 @@
 	text-align: center;
 	position: relative;
 	color: #aba59a ;
-	font-size: 0.36rem;
+	font-size: 0.32rem;
 	padding: 0.08rem;
-	
+	margin-bottom: 0;
 }
 .classify::after{
 	content: '';
@@ -339,7 +339,7 @@
 	width: 38%;
 	background: #dcdada;
 	left: 0;
-	top:0.2rem;
+	top:0.3rem;
 }
 .classify::before{
 	content: '';
@@ -348,8 +348,78 @@
 	width: 40%;
 	background: #dcdada;
 	left: 62%;;
-	top:0.2rem;
+	top:0.3rem;
 }
-.am-flexbox-item{
-	flex: none !important;
+
+
+div.tagbook:active{
+	background: #ed6460;
+	color: #fff;
 }
+.am-image-picker-list{
+	width: 100%;
+}
+.am-image-picker{
+	width: 100%;
+}
+.am-image-picker *{
+	width: 100%;
+	height: 2rem;
+	.am-flexbox-item{
+		flex: none !important;
+		width: 2rem !important;
+		&::after{
+			display: none !important;
+		}
+		&:nth-child(2){
+			display: none;
+		}
+		&:nth-child(3){
+			display: none;
+		}
+		&:nth-child(4){
+			display: none;
+		}
+	
+	}
+ .am-image-picker-item,.am-image-picker-item-content{
+	 width:1.6rem !important;
+	 height:1.6rem !important;
+	 border-radius: 50% !important;
+	 margin-left: 0.3rem !important;
+	 
+ }
+
+	
+}
+.am-input-label{
+	width: 1.5rem !important;
+	margin-left: 0.2rem !important;
+}
+.my-radio .am-radio {
+	padding: 0.05rem;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+	margin-right: 0.1rem;
+  }
+  .am-radio-item {
+	  width:70% !important;
+	  margin-left: 1.8rem;
+  }
+  .radiowarp{
+	  position: relative;
+	  &::after{
+		content: '性别' !important;
+		position: absolute;
+		font-size: 0.32rem;
+		left: 0.5rem;
+		top: 0.6rem;
+	  }
+  }
+  .am-list-content{
+	  position: relative;
+	  left: 0.2rem;
+  }
+  .freelist{
+	  margin-top: 1rem;
+  }

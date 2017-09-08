@@ -77,7 +77,7 @@ const TabIndex = () => (
       <List>
       <Item
         onClick={() => {}}
-      ><span className='greyer'>余额</span><span>充值送小姐姐</span>
+      ><span className='greyer'>余额</span><span>充值送红包</span>
       <Button className="btn"
          type="ghost" 
          size="large"
