@@ -27,7 +27,7 @@ class Tabsecond extends React.Component {
     tagarr.map((tag,i)=>{
     axios.request(
 			{	
-					url: 'https://api.douban.com/v2/book/search',
+					url: 'https://bird.ioliu.cn/v1/?url=https://api.douban.com/v2/book/search',
 					method: 'get', 
 				// https://bird.ioliu.cn/v1/?url=
 					params: {
