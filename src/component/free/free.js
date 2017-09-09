@@ -2,7 +2,15 @@ import React from 'react';
 import Card from 'antd-mobile/lib/card'
 
 
-
+const values = function(obj) {
+	var keys = Object.keys(obj);
+	var length = keys.length;
+	var values = Array(length);
+	for (var i = 0; i < length; i++) {
+	  values[i] = obj[keys[i]];
+	}
+	return values;
+  };
 
 class CardItem extends React.Component{
 	constructor (props) {
@@ -40,7 +48,7 @@ export default class Listitem extends React.Component {
 	
 	render() {
 		var bookdata=this.props.bookdata;
-		var bookdatarr=Object.values(bookdata)
+		var bookdatarr=values(bookdata)
 		var newarr=bookdatarr.concat.apply([],bookdatarr).slice(30,150).reverse()
 		console.log(newarr)
 		var newarrfirst=newarr.slice(0,3)

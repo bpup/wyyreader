@@ -141,6 +141,7 @@
 .sub-title {
   position: relative;
   text-align: left;
+  z-index: 98;
   margin-left: 0.40rem;
   font-size: .38rem;
   font-weight: bold;
@@ -508,6 +509,11 @@ div.tagbook:active {
   padding-bottom: 1rem;
 }
 
+.am-tabs {
+  width: 4.3rem;
+  margin: 0 .1rem 0 0;
+}
+
 .am-tabs .am-tabs-tab {
   width: 1.4rem;
 }
@@ -525,7 +531,6 @@ div.tagbook:active {
 }
 
 .topbar {
-  width: 100%;
   justify-content: space-between;
 }
 
@@ -545,7 +550,7 @@ div.tagbook:active {
 }
 
 .am-navbar-title {
-  width: 4.2rem;
+  width: 4.6rem;
   margin: 0 .35rem 0 0;
 }
 

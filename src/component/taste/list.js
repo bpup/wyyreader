@@ -5,6 +5,17 @@ import axios from 'axios'
 import {
 	NavLink,
 } from 'react-router-dom'
+
+const values = function(obj) {
+	var keys = Object.keys(obj);
+	var length = keys.length;
+	var values = Array(length);
+	for (var i = 0; i < length; i++) {
+	  values[i] = obj[keys[i]];
+	}
+	return values;
+  };
+
 let bookicon=<svg className="icon icon-shu"  style={{position:'relative',right:'.4rem'}} aria-hidden="true">
 <use href="#icon-shu"></use>
 </svg>
@@ -65,7 +76,7 @@ export default class BookList extends React.Component{
 
 	render(){
 		var bookdata=this.props.bookdata;
-		var bookdatarr=Object.values(bookdata)
+		var bookdatarr=values(bookdata)
 		var newarr=bookdatarr.concat.apply([],bookdatarr).reverse()		
 		return <div className="listcontent addtoplist">
 		 <NavLink to='/personset' className="personalset">{bookicon}设定阅读口味，为你私人定制</NavLink>

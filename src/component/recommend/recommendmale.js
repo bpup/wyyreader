@@ -11,6 +11,8 @@ import {
 
 
 
+
+
 const tagcontent=[
 	'骁骑校最新都市悬疑力作《罪恶调查局》',
 	'我才不会被女孩子欺负呢!',
@@ -170,7 +172,6 @@ class Recommend extends React.Component{
 	render(){
 		var bookdata=this.props.bookdata;
 		var keyarr=Object.keys(bookdata)
-		console.log(bookdata)
 		const tagarr={
 			 '0':'玄幻仙侠',
 			 "1":'悬疑冒险',
@@ -180,21 +181,11 @@ class Recommend extends React.Component{
 			 "5":'短篇小说',
 			 "6":'诺贝尔系列',
 			 "7":'英文小说'}
-		const tagarrs=[
-			 '玄幻仙侠',
-			 '悬疑冒险',
-			 '编程语言',
-			 '官场风云',
-			 '历史传奇',
-			 '短篇小说',
-			 '诺贝尔系列',
-			 '英文小说']
 			return <div className='recommand'>
 			<Carouselmale/>
 			<Taghot/>
 		  {	keyarr.map((i)=>{
-				console.log(i)
-		    	return <GridSix bookdata={bookdata[i]} key={i.toString()} title={tagarrs[parseInt(i)]}/>
+		    	return <GridSix bookdata={bookdata[i]} key={i.toString()} title={tagarr[i]}/>
 				
 			})}
 		

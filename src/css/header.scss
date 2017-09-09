@@ -121,6 +121,7 @@
 .sub-title{
 	position: relative;
 	text-align: left;
+	z-index: 98;
 	margin-left: 0.40rem;
 	font-size: .38rem;
 	font-weight: bold;
@@ -456,7 +457,8 @@ div.tagbook:active{
 	  padding-bottom: 1rem;
   }
   .am-tabs {
-
+   width:4.3rem;
+   margin: 0 .1rem 0 0;
    .am-tabs-tab{
 	   width: 1.4rem
    }
@@ -471,7 +473,6 @@ div.tagbook:active{
 	  width: 100%;
   }
   .topbar{
-	  width: 100%;
 	  justify-content: space-between;
 	  .am-navbar-left{
 		  .am-navbar-left-icon{
@@ -487,9 +488,9 @@ div.tagbook:active{
 	  }
   }
   .am-navbar-title{
-	 width: 4.2rem;
-	 margin: 0 .35rem 0 0;
-	 .am-tabs ,.am-tabs-bar{
-		width: 100%; 
-	 }
-  }
+	width: 4.6rem;
+	margin: 0 .35rem 0 0;
+	.am-tabs ,.am-tabs-bar{
+	   width: 100%; 
+	}
+ }
