@@ -334,7 +334,7 @@
 .classify::after{
 	content: '';
 	position: absolute;
-	height: 1px;
+	height: .01rem;
 	width: 38%;
 	background: #dcdada;
 	left: 0;
@@ -343,7 +343,7 @@
 .classify::before{
 	content: '';
 	position: absolute;
-	height: 1px;
+	height: .01rem;
 	width: 40%;
 	background: #dcdada;
 	left: 62%;;
@@ -397,7 +397,7 @@ div.tagbook:active{
 }
 .my-radio .am-radio {
 	padding: 0.05rem;
-	border: 1px solid #ccc;
+	border: .01rem solid #ccc;
 	border-radius: 50%;
 	margin-right: 0.1rem;
   }
@@ -463,4 +463,25 @@ div.tagbook:active{
   }
   .male .am-tabs {
 	  width: 100%;
+  }
+  .female .am-tabs {
+	  width: 100%;
+  }
+  .publish .am-tabs {
+	  width: 100%;
+  }
+  .topbar{
+	  justify-content: space-between;
+	  .am-navbar-left{
+		  .am-navbar-left-icon{
+			  display: none;
+		  }
+		  left: 0.3rem;
+	  }
+	  .am-navbar-right{
+		  width: .9rem !important;
+		  margin-right: 0;
+		  position: relative;
+		  right: 0.3rem;
+	  }
   }
