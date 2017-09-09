@@ -1,9 +1,7 @@
 import React from 'react';
 import NavBar from 'antd-mobile/lib/nav-bar'
-import Card from 'antd-mobile/lib/card'
 import Flex from 'antd-mobile/lib/flex'
 import WhiteSpace from 'antd-mobile/lib/white-space'
-import WingBlank from 'antd-mobile/lib/wing-blank'
 import Infoinput from './infoinput.js'
 import {
 	NavLink,

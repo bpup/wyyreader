@@ -9,7 +9,7 @@ class Tast extends React.Component{
 		
 	}
 	render() {
-	  return <BookList  bookdata={this.props.bookdata}/>
+	  return <div className='tast'><BookList bookdata={this.props.bookdata}/></div>
 		
 	}
 }

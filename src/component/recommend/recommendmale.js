@@ -180,12 +180,21 @@ class Recommend extends React.Component{
 			 "5":'短篇小说',
 			 "6":'诺贝尔系列',
 			 "7":'英文小说'}
-			return <div>
+		const tagarrs=[
+			 '玄幻仙侠',
+			 '悬疑冒险',
+			 '编程语言',
+			 '官场风云',
+			 '历史传奇',
+			 '短篇小说',
+			 '诺贝尔系列',
+			 '英文小说']
+			return <div className='recommand'>
 			<Carouselmale/>
 			<Taghot/>
 		  {	keyarr.map((i)=>{
 				console.log(i)
-		    	return <GridSix bookdata={bookdata[i]} key={i.toString()} title={tagarr[i]}/>
+		    	return <GridSix bookdata={bookdata[i]} key={i.toString()} title={tagarrs[parseInt(i)]}/>
 				
 			})}
 		

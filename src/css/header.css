@@ -503,3 +503,11 @@ div.tagbook:active {
   font-size: .28rem;
   text-align: left;
 }
+
+.recommand, .tast, .freewarp, .category, .topicewarp {
+  padding-bottom: 1rem;
+}
+
+.am-navbar-title * {
+  overflow: hidden !important;
+}

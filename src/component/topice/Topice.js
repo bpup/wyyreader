@@ -73,7 +73,7 @@ export default class Topice extends React.Component{
 	}
 	render() {
 	  return (
-		<div>
+		<div className='topicewarp'>
 		 {topicedata.map((item)=>{
 			return <Topiceitem item={item}/>
 		 })}

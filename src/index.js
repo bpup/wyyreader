@@ -12,7 +12,6 @@ import {
 	Route,
 	Switch
 	} from 'react-router-dom'
-import axios from 'axios'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 

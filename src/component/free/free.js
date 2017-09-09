@@ -12,7 +12,7 @@ class CardItem extends React.Component{
 	render() {
 	 var item=this.props.item
 	  return (
-		<div>
+		<div className='freewarp'>
 		   <Card>
 			   <Card.Body>
 				   <div className='cardbody'>

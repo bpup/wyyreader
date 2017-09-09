@@ -15,11 +15,12 @@ html {
   height: 100%;
   width: 100%;
   }
-  html,body,{
-    overflow:hidden !important;overflow-y:auto;}
+  html,body{
+    overflow:hidden; 
+    overflow-y:auto;}
   /* HTML5 display definitions
 	 ========================================================================== */
-  
+ 
   /**
    * Add the correct display in IE 9-.
    * 1. Add the correct display in Edge, IE, and Firefox.
