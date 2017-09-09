@@ -525,6 +525,7 @@ div.tagbook:active {
 }
 
 .topbar {
+  width: 100%;
   justify-content: space-between;
 }
 
@@ -546,4 +547,8 @@ div.tagbook:active {
 .am-navbar-title {
   width: 4.2rem;
   margin: 0 .35rem 0 0;
+}
+
+.am-navbar-title .am-tabs, .am-navbar-title .am-tabs-bar {
+  width: 100%;
 }

@@ -471,6 +471,7 @@ div.tagbook:active{
 	  width: 100%;
   }
   .topbar{
+	  width: 100%;
 	  justify-content: space-between;
 	  .am-navbar-left{
 		  .am-navbar-left-icon{
@@ -487,5 +488,8 @@ div.tagbook:active{
   }
   .am-navbar-title{
 	 width: 4.2rem;
-	 margin: 0 .35rem 0 0
+	 margin: 0 .35rem 0 0;
+	 .am-tabs ,.am-tabs-bar{
+		width: 100%; 
+	 }
   }

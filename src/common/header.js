@@ -35,7 +35,6 @@ function handleTabClick(key) {
   console.log('onTabClick', key);
 }
 const TabIndex = () => (
-  <div className='x'>
     <Tabs swipeable={false} className='tabs' defaultActiveKey="1" onChange={callback} onTabClick={handleTabClick}>
       <TabPane className='totaltab' tab='男生' key="1">
         <div className="male">
@@ -49,7 +48,6 @@ const TabIndex = () => (
       <div className="publish"> <TabExample/></div>        
       </TabPane>
     </Tabs>
-  </div>
 );
 
 
