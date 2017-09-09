@@ -455,6 +455,9 @@ div.tagbook:active{
   .recommand,.tast,.freewarp,.category,.topicewarp{
 	  padding-bottom: 1rem;
   }
-  .am-navbar-title *{
-    overflow: hidden !important;
+  .am-tabs {
+   width:4.2rem;
+   .am-tabs-tab{
+	   width: 1.4rem
+   }
   }

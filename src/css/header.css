@@ -508,6 +508,10 @@ div.tagbook:active {
   padding-bottom: 1rem;
 }
 
-.am-navbar-title * {
-  overflow: hidden !important;
+.am-tabs {
+  width: 4.2rem;
+}
+
+.am-tabs .am-tabs-tab {
+  width: 1.4rem;
 }
