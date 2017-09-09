@@ -16,7 +16,7 @@ let bookicon=<svg className="icon icon-shu"  style={{position:'relative',right:'
 
 	 render() {
 		var item=this.props.item
-				if(item.summary){
+				if(item){
 					
 					return <Card>
 				<Card.Body>

@@ -225,7 +225,7 @@
 	}
 }}
 .listcontent{
-	margin-top: .8rem;
+	margin-top: .3rem;
 }
 .am-navbar-left{
 	position: relative;
@@ -279,8 +279,7 @@
 	}
 }
 .addtoplist{
-	position: absolute;
-	top:-0.9rem;
+
 	.personalset{
 		color: #333;
 		width: 86%;
@@ -422,4 +421,33 @@ div.tagbook:active{
   }
   .freelist{
 	  margin-top: 1rem;
+  }
+  .category{
+	  *::after{
+		  display: none !important;
+	  }
+	  .am-grid-icon{
+		  width: 3.5rem !important;
+		  height: auto !important;
+	  }
+	  .am-flexbox-item{
+		  margin: 0;
+		  height: 2.4rem;
+	  }
+  }
+  .topice{
+	  .am-card-header{
+		  padding: .39rem;
+		  display: block;}
+	.am-card-body{
+		padding: 0;
+		width: 100%;
+	}
+	.am-card-header-extra{
+		display: block;
+		color: #8a8886;
+		margin-top: 0.2rem;
+		font-size: .28rem;
+		text-align: left;
+	}
   }

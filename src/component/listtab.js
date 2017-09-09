@@ -3,6 +3,8 @@ import Tabs from 'antd-mobile/lib/tabs'
 import Recommend from './recommend/recommendmale.js'
 import Tast from './taste/tast.js'
 import Listitem from './free/free.js'
+import Category from './category/category.js'
+import Topice from './topice/Topice.js'
 import axios from 'axios'
 
 const TabPane = Tabs.TabPane;
@@ -64,7 +66,7 @@ class Tabsecond extends React.Component {
         </div>
       </TabPane>
       <TabPane tab='口味' key="2" style={{flexGrow:1}}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '5rem', backgroundColor: '#fff' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff' }}>
           <Tast bookdata={bookdata}/>
         </div>
       </TabPane>
@@ -74,13 +76,13 @@ class Tabsecond extends React.Component {
         </div>
       </TabPane>
       <TabPane tab='分类' key="4"  style={{flexGrow:1}}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '5rem', backgroundColor: '#fff' }}>
-          Content of Third Tab
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center',backgroundColor: '#fff' }}>
+          <Category/>
         </div>
       </TabPane>
       <TabPane tab='专题' key="5"  style={{flexGrow:1}}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '5rem', backgroundColor: '#fff' }}>
-          Content of Third Tab
+          <Topice/>
         </div>
       </TabPane>
     </Tabs>

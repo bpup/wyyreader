@@ -253,7 +253,7 @@
 }
 
 .listcontent {
-  margin-top: .8rem;
+  margin-top: .3rem;
 }
 
 .am-navbar-left {
@@ -309,11 +309,6 @@
 
 .sidber-avatar section .icon-yejian {
   color: #333 !important;
-}
-
-.addtoplist {
-  position: absolute;
-  top: -0.9rem;
 }
 
 .addtoplist .personalset {
@@ -475,4 +470,36 @@ div.tagbook:active {
 
 .freelist {
   margin-top: 1rem;
+}
+
+.category *::after {
+  display: none !important;
+}
+
+.category .am-grid-icon {
+  width: 3.5rem !important;
+  height: auto !important;
+}
+
+.category .am-flexbox-item {
+  margin: 0;
+  height: 2.4rem;
+}
+
+.topice .am-card-header {
+  padding: .39rem;
+  display: block;
+}
+
+.topice .am-card-body {
+  padding: 0;
+  width: 100%;
+}
+
+.topice .am-card-header-extra {
+  display: block;
+  color: #8a8886;
+  margin-top: 0.2rem;
+  font-size: .28rem;
+  text-align: left;
 }
