@@ -456,7 +456,7 @@ div.tagbook:active{
 	  padding-bottom: 1rem;
   }
   .am-tabs {
-   width:4.2rem;
+
    .am-tabs-tab{
 	   width: 1.4rem
    }
@@ -476,12 +476,16 @@ div.tagbook:active{
 		  .am-navbar-left-icon{
 			  display: none;
 		  }
-		  left: 0.3rem;
+		  left: 0.4rem;
 	  }
 	  .am-navbar-right{
 		  width: .9rem !important;
 		  margin-right: 0;
 		  position: relative;
-		  right: 0.3rem;
+		  right: 0.4rem;
 	  }
+  }
+  .am-navbar-title{
+	 width: 4.2rem;
+	 margin: 0 .35rem 0 0
   }

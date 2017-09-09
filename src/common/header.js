@@ -35,7 +35,7 @@ function handleTabClick(key) {
   console.log('onTabClick', key);
 }
 const TabIndex = () => (
-  <div className='tabindexwarp'>
+  <div className='x'>
     <Tabs swipeable={false} className='tabs' defaultActiveKey="1" onChange={callback} onTabClick={handleTabClick}>
       <TabPane className='totaltab' tab='男生' key="1">
         <div className="male">
@@ -191,8 +191,7 @@ class NavBarindex extends React.Component{
       open: false,
     }
    }
-   onOpenChange = (...args) => {
-    console.log(args);
+   onOpenChange = () => {
     this.setState({ open: !this.state.open });
   }
 	 render(){
@@ -204,7 +203,6 @@ class NavBarindex extends React.Component{
    >
   <Drawer
 
-    transitions
     touch={false}
     className="my-drawer"
     style={{ 
@@ -213,7 +211,6 @@ class NavBarindex extends React.Component{
       sidebarStyle={{
         width:'80%' 
       }}
-    enableDragHandle={true}
     contentStyle={{ color: '#A6A6A6', textAlign: 'center', paddingTop: 42 }}
     sidebar={sidebar}
     open={open}
