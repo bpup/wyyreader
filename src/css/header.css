@@ -515,3 +515,7 @@ div.tagbook:active {
 .am-tabs .am-tabs-tab {
   width: 1.4rem;
 }
+
+.male .am-tabs {
+  width: 100%;
+}
