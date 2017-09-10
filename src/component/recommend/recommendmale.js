@@ -114,7 +114,7 @@ class GridSix extends React.Component{
 					bookdata: bookdata,
 					title:this.props.title
 				}}
-			let datasix=bookdata.slice(0,6)
+			let datasix=bookdata.slice(6,12)
 				return <div>
 				<div className="sub-title">{this.props.title} <NavLink  className='more' to={localtion}><span>更多...</span></NavLink></div>
 				<Grid data={datasix}
