@@ -8,11 +8,10 @@ import Topice from './topice/Topice.js'
 import axios from 'axios'
 
 
-
+var malearr=['xx','xy','pc','gc','cq','dp','rbe','en']
+var femalearr=['cy','yq','dq','gf','jd','cs','gd']
 const TabPane = Tabs.TabPane;
-const tagarr=['仙侠','悬疑','编程语言',
-'官场','历史','短篇小说',
-'诺贝尔','外文']
+
 function callback(key) {
   console.log('onChange', key);
 }
@@ -23,25 +22,17 @@ class Tabsecond extends React.Component {
   constructor(props) {
    super(props)
    this.state={
-    bookdata:{}
+    bookdata:{},
+    febookdata:{}
    }
   }
   componentDidMount = () => {
     var _this=this;
-    tagarr.map((tag,i)=>{
+    malearr.map((tag,i)=>{
     axios.request(
 			{	
-					url: 'https://bird.ioliu.cn/v1/?url=https://api.douban.com/v2/book/search',
+					url: 'http://ot7zo8t2i.bkt.clouddn.com/'+tag+'.json',
 					method: 'get', 
-				// https://bird.ioliu.cn/v1/?url=
-					params: {
-						tag: tag,
-						count:50,
-						start:parseInt(Math.random()*100)
-
-					}
-				
-				
 				}
 			
 		).then(function (response) {
@@ -56,10 +47,31 @@ class Tabsecond extends React.Component {
 
       
     })
+    femalearr.map((tag,i)=>{
+    axios.request(
+			{	
+					url: 'http://ot7zo8t2i.bkt.clouddn.com/'+tag+'.json',
+					method: 'get', 
+				}
+			
+		).then(function (response) {
+        var febookdata=Object.assign({}, _this.state.febookdata);
+    
+        febookdata[i]=response.data.books;
+				_this.setState({
+				febookdata:febookdata})
+			}).catch(function (error) {
+					console.log(error)
+			})
+
+      
+    })
+
   }
   
   render(){
     var bookdata=this.state.bookdata;
+    var febookdata=this.state.febookdata;
     return   <div>
     <Tabs swipeable={false} className='manyTabs' defaultActiveKey="1" onChange={callback} onTabClick={handleTabClick}>
       <TabPane tab='推荐' key="1" style={{flexGrow:1}}>
@@ -79,7 +91,7 @@ class Tabsecond extends React.Component {
       </TabPane>
       <TabPane tab='分类' key="4"  style={{flexGrow:1}}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center',backgroundColor: '#fff' }}>
-          <Category/>
+          <Category bookdata={bookdata} febookdata={febookdata}/>
         </div>
       </TabPane>
       <TabPane tab='专题' key="5"  style={{flexGrow:1}}>

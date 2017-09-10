@@ -557,3 +557,8 @@ div.tagbook:active {
 .am-navbar-title .am-tabs, .am-navbar-title .am-tabs-bar {
   width: 100%;
 }
+
+.classmore {
+  position: relative;
+  top: 0.9rem;
+}

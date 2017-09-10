@@ -7,26 +7,15 @@ import 'antd-mobile/dist/antd-mobile.min.css'
 import BookMoreList from './component/recommend/entry.js'
 import Personalset from './component/taste/personalset.js'
 import Infoinput from './component/taste/infoinput.js'
+import BookclaasList from './component/category/classfiy.js'
 import {
-	HashRouter,
 	Route,
+	BrowserRouter ,
 	Switch
 	} from 'react-router-dom'
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+	
 
 
-
-
- const reducer = (state =[] , action) => {
-	switch (action.type) {
-		case 'UNRESIGER':
-			return Object.assign({}, action.payload)
-		default:
-			return state
-	}
-}
- const store=createStore(reducer)
 
 class Entry extends React.Component {
 
@@ -34,20 +23,19 @@ class Entry extends React.Component {
 	  render() {
 
 		return (
-			<HashRouter>
-			<Switch>
+			<BrowserRouter>	
+			<Switch>			
 			  <Route exact path='/' component={App}/>
 			  <Route path='/more' component={BookMoreList}/>
 			  <Route exact path='/personset' component={Personalset}/>
 			  <Route path='/personset/infoinput' component={Infoinput}/>
-			</Switch>
-			</HashRouter>
+			  <Route path='/class' component={BookclaasList}/>
+			 </Switch> 
+			</BrowserRouter>
+			  
 		)
 	  }
 	}
 	
-ReactDOM.render(
-<Provider
-store={store}
-><Entry /></Provider>, document.getElementById('root'));
+ReactDOM.render(<Entry />, document.getElementById('root'));
 registerServiceWorker();
